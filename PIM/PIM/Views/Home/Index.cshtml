@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - PIM</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/PIM.styles.css" asp-append-version="true" />
+</head>
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-success border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center p-3" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/farforyou.png" class="img-fluid rounded-3" style="max-height: 60px;" alt="Logo" />
+                </a>
+                <h1 class="d-none d-md-block">Bem-vindo a nossa Fazenda!</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" navbar-collapse collapse d-sm-inline-flex justify-content-end ">
+                    <ul class="navbar-nav  d-flex justify-content-between">
+                        <li class="nav-item pe-3">
+                            <a class="nav-link text-light fw-bolder" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a> <!-- Paginação -->
+                        </li>
+                        <li class="nav-item pe-3 ">
+                            <a class="nav-link text-light fw-bolder"  href="#contato" >Sobre</a>
+                        </li>
+                        <li class="nav-item  pe-md-5">
+                            <a class="nav-link text-light fw-bolder"  href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Seção Hero -->
+    <section id="hero" class="bg-light p-5 text-center">
+        <div class="container">
+            <h2 class="display-4">Nossa Fazenda Urbana</h2>
+            <p class="lead">Produção sustentável e tecnologia para o futuro!</p>
+            <a href="#sobre" class="btn btn-success btn-lg">Saiba Mais</a>
+        </div>
+    </section>
+
+
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma fazenda urbana dedicada à produção de alimentos saudáveis com o uso de tecnologias modernas e sustentáveis. Nossos métodos de produção respeitam o meio ambiente, e temos orgulho de levar alimentos frescos à mesa da nossa comunidade.</p>
+            <img src="~/images/sanji.jpg" class="img-fluid" />
+        </section>
+
+    <section id="contato" class="bg-light text-center p-5">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Tem dúvidas? Fale conosco pelo WhatsApp!</p>
+            <a href="https://wa.me/5588999999999" class="btn btn-success">Fale Conosco</a>
+        </div>
+    </section>
+    <footer class="bg-success text-white text-center p-4">
+        <p>&copy; 2024 Meu Blog - Todos os direitos reservados.</p>
+        <p>Desenvolvido com ♥ por [Seu Nome]</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+    </html>
